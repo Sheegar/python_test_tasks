@@ -109,14 +109,14 @@ class Barrel:
         if self.current_water_level == 0:
             self.current_water_level = self.water_level_in_start
         records = [
-                    {"Попыток налить воды всего": self.top_up_tries},
-                    {"Процент ошибок при попытке налить": f'{self.top_up_err_in_percent}%'},
-                    {"Всего воды налито (л.)": self.water_top_up_level},
-                    {"Попыток набрать воды всего": self.scoop_tries},
-                    {"Процент ошибок при попытке набрать": f'{self.scoop_err_in_percent}%'},
-                    {"Всего воды набрано (л.)": self.water_scoop_level},
-                    {"Объем воды в начале (л.)": self.water_level_in_start},
-                    {"Объем воды в конце (л.)": self.current_water_level}
+                    {"Попыток налить воды всего": self.top_up_tries,
+                        "Процент ошибок при попытке налить": f'{self.top_up_err_in_percent}%',
+                        "Всего воды налито (л.)": self.water_top_up_level,
+                        "Попыток набрать воды всего": self.scoop_tries,
+                        "Процент ошибок при попытке набрать": f'{self.scoop_err_in_percent}%',
+                        "Всего воды набрано (л.)": self.water_scoop_level,
+                        "Объем воды в начале (л.)": self.water_level_in_start,
+                        "Объем воды в конце (л.)": self.current_water_level}
         ]
 
         csv_writer(records)
